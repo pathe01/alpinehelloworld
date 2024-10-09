@@ -2,9 +2,8 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN pip freeze > requirements.txt
-RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
+RUN apk add --no-cache --update python3 py3-pip bash
 
 # Install dependencies
 RUN pip3 install /tmp/requirements.txt
