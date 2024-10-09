@@ -2,11 +2,11 @@
 FROM alpine:latest
 
 # Install python and pip
-ADD ./webapp/requirements.txt /tmp/requirements.txt
+ADD ./webapp/requirements.txt /requirements.txt
 RUN apk add --no-cache --update python3 py3-pip bash
 
 # Install dependencies
-RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Add our code
 ADD ./webapp /opt/webapp/
