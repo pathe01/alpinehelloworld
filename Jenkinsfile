@@ -19,7 +19,7 @@ pipline{
                 script{
 
                   sh '''
-                   docker built -t --name ${IMAGE_NAME}:${IMAGE_TAG} .
+                   docker built -t ${IMAGE_NAME}:${IMAGE_TAG} .
                 }
             }
          }
