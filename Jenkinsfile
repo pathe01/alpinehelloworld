@@ -18,8 +18,7 @@ pipline{
             steps{
                 script{
 
-                  sh '''
-                   docker built -t ${IMAGE_NAME}:${IMAGE_TAG} .
+                  sh 'docker built -t ${IMAGE_NAME}:${IMAGE_TAG} .'
                 }
             }
          }
@@ -30,7 +29,8 @@ pipline{
                 script{
 
                   sh '''
-                   docker run  -it --name ${IMAGE_NAME} -d -p 80:5000 -e PORT=5000 ${IMAGE_NAME}:${IMAGE_TAG} 
+                    docker run  -it --name ${IMAGE_NAME} -d -p 80:5000 -e PORT=5000 ${IMAGE_NAME}:${IMAGE_TAG} 
+		    '''
                 }
             }
          }
@@ -41,7 +41,8 @@ pipline{
                 script{
 
                   sh '''
-                   curl http://172.17.0.1 | grep -q "Hello world!"
+                    curl http://172.17.0.1 | grep -q "Hello world!"
+		   '''
                 }
             }
          }
@@ -54,7 +55,7 @@ pipline{
                   sh '''
                    docker stop ${IMAGE_NAME}
                    docker rm  ${IMAGE_NAME}
-                   ...
+                   '''
                 }
             }
          }
@@ -75,7 +76,7 @@ pipline{
                  heroku create $STAGING || "echo project is already exist"
                  heroku container: push -a $STAGING web
                  heroku container: release -a $STAGING web
-                 ...
+                 '''
             }
          }
 
@@ -95,7 +96,7 @@ pipline{
                  heroku create $PRODUCTION || "echo project is already exist"
                  heroku container: push -a $PRODUCTION web
                  heroku container: release -a $PRODUCTION web
-                 ...
+                 '''
             }
          }
 
