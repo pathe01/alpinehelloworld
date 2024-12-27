@@ -70,7 +70,7 @@ pipeline {
           }
       }
 
-      stage ('Login and Push Image on docker hub') {
+      /*stage ('Login and Push Image on docker hub') {
           agent any
           steps {
              script {
@@ -80,7 +80,7 @@ pipeline {
                '''
              }
           }
-      }
+      }*/
 
       stage('STAGING - Deploy app') {
       agent any
