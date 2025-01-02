@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = "alpinehelloworld"                    /*alpinehelloworld par exemple*/
         //APP_EXPOSED_PORT = "${PARAM_PORT_EXPOSED}"            /*80 par défaut*/
         APP_NAME = "pathe"                        /*eazytraining par exemple*/
-        IMAGE_TAG = "latest"                      /*tag docker, par exemple latest*/
+        IMAGE_TAG = "latest"                      /*tag docker, par exemple latest*/ 
         //STAGING = "${PARAM_APP_NAME}-staging"
         //PRODUCTION = "${PARAM_APP_NAME}-prod"
        //ID_DOCKER = "${PARAM_ID_DOCKER}"
