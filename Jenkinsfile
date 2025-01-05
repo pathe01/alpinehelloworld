@@ -9,10 +9,10 @@ pipeline {
         //PRODUCTION = "${PARAM_APP_NAME}-prod"
        //ID_DOCKER = "${PARAM_ID_DOCKER}"
         DOCKERHUB_PASSWORD = credentials('dockerhub_pathe01')
-        STG_API_ENDPOINT = "192.168.56.11:1993"        /* Mettre le couple IP:PORT de votre API eazylabs, exemple 100.25.147.76:1993 */
-        STG_APP_ENDPOINT = "192.168.56.11:8000"        /* Mettre le couple IP:PORT votre application en staging, exemple 100.25.147.76:8000 */
-        PROD_API_ENDPOINT = "192.168.56.11:1993"       /* Mettre le couple IP:PORT de votre API eazylabs, 100.25.147.76:1993 */
-        PROD_APP_ENDPOINT = "192.168.56.11"            /* Mettre le couple IP:PORT votre application en production, exemple 100.25.147.76 */
+        STG_API_ENDPOINT = "192.168.56.12:1993"        /* Mettre le couple IP:PORT de votre API eazylabs, exemple 100.25.147.76:1993 */
+        STG_APP_ENDPOINT = "192.168.56.12:8000"        /* Mettre le couple IP:PORT votre application en staging, exemple 100.25.147.76:8000 */
+        PROD_API_ENDPOINT = "192.168.56.12:1993"       /* Mettre le couple IP:PORT de votre API eazylabs, 100.25.147.76:1993 */
+        PROD_APP_ENDPOINT = "192.168.56.12"            /* Mettre le couple IP:PORT votre application en production, exemple 100.25.147.76 */
         INTERNAL_PORT = "5000"     /*5000 par défaut*/
         //INTERNAL_PORT = "${PARAM_INTERNAL_PORT}"      /*5000 par défaut*/
         EXTERNAL_PORT = "${PORT_EXPOSED}"
