@@ -96,7 +96,7 @@ pipeline {
      }
      stage('PROD - Deploy app') {
        when {
-           expression { GIT_BRANCH == 'origin/eazylabs' }
+           expression { GIT_BRANCH == 'origin/master' }
        }
      agent any
 
