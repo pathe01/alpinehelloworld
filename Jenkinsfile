@@ -1,7 +1,7 @@
 pipeline {
     environment {
         ID_DOCKER = "${ID_DOCKER_PARAMS}"
-        IMAGE_NAME = "alpinehelloworld"                    /*alpinehelloworld par exemple*/
+        IMAGE_NAME = "alpinehelloworld"                    /*alpinehelloworld par exemple*/ 
         //APP_EXPOSED_PORT = "${PARAM_PORT_EXPOSED}"            /*80 par défaut*/
         APP_NAME = "pathe"                        /*eazytraining par exemple*/
         IMAGE_TAG = "latest"                      /*tag docker, par exemple latest*/ 
