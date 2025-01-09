@@ -1,5 +1,5 @@
 /* import shared library */
-@Library(infolearn-shared-library)
+@Library('shared-library')_
 
 pipeline {
     environment {
