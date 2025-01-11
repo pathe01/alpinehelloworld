@@ -98,9 +98,9 @@ pipeline {
      
      }
      stage('PROD - Deploy app') {
-     /*  when {
+       when {
            expression { GIT_BRANCH == 'origin/master' }
-       }/*
+       }
      agent any
 
        steps {
